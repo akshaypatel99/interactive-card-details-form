@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/akshaypatel99/frontend-mentor/tree/main/interactive-card-details-form](https://github.com/akshaypatel99/frontend-mentor/tree/main/interactive-card-details-form)
+- Solution URL: [https://github.com/akshaypatel99/interactive-card-details-form](https://github.com/akshaypatel99/interactive-card-details-form)
 - Live Site URL: [https://akshaypatel99.github.io/interactive-card-details-form/](https://akshaypatel99.github.io/interactive-card-details-form/)
 
 ## My process
