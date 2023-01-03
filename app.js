@@ -7,9 +7,11 @@ let imageCVC = document.querySelector('.cvc');
 let confirmBtn = document.getElementById('confirm');
 
 function updateCardName(value) {
+	if (value.length === 0) return;
 	imageCardholderName.innerHTML = value;
 }
 function updateCardNumber(value) {
+	if (value.length === 0) return;
 	let parts = [];
 	for (let i = 0; i < value.length; i += 4) {
 		parts.push(value.substring(i, i + 4));
@@ -20,12 +22,15 @@ function updateCardNumber(value) {
 }
 
 function updateMonth(value) {
+	if (value.length === 0) return;
 	imageExpiryMonth.innerHTML = value;
 }
 function updateYear(value) {
+	if (value.length === 0) return;
 	imageExpiryYear.innerHTML = value;
 }
 function updateCVC(value) {
+	if (value.length === 0) return;
 	imageCVC.innerHTML = value;
 }
 
