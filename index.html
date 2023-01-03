@@ -9,14 +9,12 @@
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+			href="./images/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="stylesheet" href="./styles.css" />
 		<title>Frontend Mentor | Interactive card details form</title>
 
@@ -35,31 +33,26 @@
 		<main>
 			<article>
 				<div class="cards-container">
-					<picture class="cards-bg">
-						<source
-							media="(min-width: 1440px)"
-							srcset="./images/bg-main-desktop.png"
-						/>
-						<img src="./images/bg-main-mobile.png" alt="" />
-					</picture>
-					<div class="card card-back">
-						<p class="cvc">000</p>
-					</div>
-					<div class="card card-front">
-						<img
-							src="./images/card-logo.svg"
-							alt="Card logo"
-							class="card-logo"
-						/>
-						<div class="card-info">
-							<p class="card-number">0000 0000 0000 0000</p>
-							<div class="card-details">
-								<p class="cardholder-name">Jane Appleseed</p>
-								<p class="expiry-date">
-									<span class="expiry-month">00</span>/<span class="expiry-year"
-										>00</span
-									>
-								</p>
+					<div class="cards-wrapper">
+						<div class="card card-back">
+							<p class="cvc">000</p>
+						</div>
+						<div class="card card-front">
+							<img
+								src="./images/card-logo.svg"
+								alt="Card logo"
+								class="card-logo" />
+							<div class="card-info">
+								<p class="card-number">0000 0000 0000 0000</p>
+								<div class="card-details">
+									<p class="cardholder-name">Jane Appleseed</p>
+									<p class="expiry-date">
+										<span class="expiry-month">00</span>/<span
+											class="expiry-year"
+											>00</span
+										>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -77,8 +70,7 @@
 									class="input-text"
 									placeholder="e.g. Jane Appleseed"
 									required
-									onkeyup="updateCardName(this.value)"
-								/>
+									onkeyup="updateCardName(this.value)" />
 							</label>
 							<p class="error-message" id="cardholder-name-error"></p>
 						</div>
@@ -94,8 +86,7 @@
 									required
 									inputmode="numeric"
 									pattern="[0-9]"
-									onkeyup="updateCardNumber(this.value)"
-								/>
+									onkeyup="updateCardNumber(this.value)" />
 							</label>
 							<p class="error-message" id="card-number-error"></p>
 						</div>
@@ -106,8 +97,7 @@
 										for="expiry"
 										class="expiry-date"
 										aria-hidden="true"
-										id="expiry-label"
-									>
+										id="expiry-label">
 										Exp. Date (MM/YY)
 									</label>
 									<div class="date-inputs">
@@ -120,8 +110,7 @@
 											required
 											inputmode="numeric"
 											aria-label="Expiry Month"
-											onkeyup="updateMonth(this.value)"
-										/>
+											onkeyup="updateMonth(this.value)" />
 										<input
 											type="number"
 											name="expiry-year"
@@ -131,8 +120,7 @@
 											required
 											inputmode="numeric"
 											aria-label="Expiry Year"
-											onkeyup="updateYear(this.value)"
-										/>
+											onkeyup="updateYear(this.value)" />
 									</div>
 									<p class="error-message" id="expiry-error"></p>
 								</fieldset>
@@ -148,8 +136,7 @@
 										placeholder="e.g. 123"
 										required
 										inputmode="numeric"
-										onkeyup="updateCVC(this.value)"
-									/>
+										onkeyup="updateCVC(this.value)" />
 								</label>
 								<p class="error-message" id="cvc-error"></p>
 							</div>
@@ -162,8 +149,7 @@
 					<img
 						src="./images/icon-complete.svg"
 						alt="Tick icon"
-						class="complete-icon"
-					/>
+						class="complete-icon" />
 					<h1>Thank you!</h1>
 					<p>We've added your card details</p>
 					<a href="#">Continue</a>

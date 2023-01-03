@@ -1,5 +1,5 @@
 :root {
-  --font-size: 18px;
+  --font-size: 1.125rem;
   --linear-gradient: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   --red: hsl(0, 100%, 66%);
   --white: hsl(0, 0%, 100%);
@@ -33,13 +33,23 @@ main {
 }
 
 article {
-  width: 375px;
-  height: 700px;
+  display: grid;
+  grid-template-columns: 375px;
+  grid-template-rows: 250px 400px;
   background-color: var(--white);
 }
 
 .cards-container {
   width: 100%;
+  position: relative;
+  background-image: url('./images/bg-main-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cards-wrapper {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -62,7 +72,7 @@ article {
 
 .cvc {
   color: var(--white);
-  font-size: calc(0.5 * var(--font-size));
+  font-size: 0.5em;
   letter-spacing: 0.2ch;
   position: absolute;
   top: 4.5rem;
@@ -98,7 +108,7 @@ article {
 }
 
 .card-details {
-  font-size: calc(0.6 * var(--font-size));
+  font-size: 0.6em;
   display: flex;
   justify-content: space-between;
   letter-spacing: 0.25ch;
@@ -109,13 +119,9 @@ article {
 }
 
 .form-container {
-  padding: 5rem 1.5rem 1rem;
-  width: 100%;
+  padding: 1.5rem;
+  align-self: flex-end;
   /* display: none; */
-}
-
-.form-container.show-error {
-  padding: 4rem 1.5rem 1rem;
 }
 
 .form-container.complete {
@@ -128,7 +134,7 @@ article {
 }
 
 label {
-  font-size: calc(0.65 * var(--font-size));
+  font-size: 0.65em;
   letter-spacing: 0.2ch;
   text-transform: uppercase;
   display: flex;
@@ -142,7 +148,7 @@ input {
   border-style: solid;
   border-color: var(--light-grayish-violet);
   margin-top: 0.25rem;
-  font-size: calc(1 * var(--font-size));
+  font-size: 1rem;
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -198,7 +204,7 @@ fieldset {
 .error-message {
   display: none;
   color: var(--red);
-  font-size: calc(0.65 * var(--font-size));
+  font-size: 0.65em;
   margin-top: 0.25rem;
   height: 11px;
   width: 100%;
@@ -213,7 +219,7 @@ fieldset {
   background-color: var(--very-dark-violet);
   border-radius: 8px;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: calc(1 * var(--font-size));
+  font-size: 1em;
   color: var(--light-grayish-violet);
   width: 100%;
   padding: 1rem 0;
@@ -225,9 +231,8 @@ fieldset {
 }
 
 .thank-you {
-  width: 100%;
-  height: 455px;
-  padding: 5rem 1.5rem;
+  padding: 1.5rem;
+  align-self: flex-end;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -273,14 +278,20 @@ footer {
 @media (min-width: 1440px) {
   article {
     width: 100%;
-    height: 900px;
-    display: flex;
-    justify-content: space-between;
+    height: 100%;
+    grid-template-columns: minmax(30rem, 50rem) 200px minmax(1fr, 60rem) 100px;
+    grid-template-columns: 30% min(25%, 600px) 30% minmax(15%, 1fr);
+    grid-template-rows: auto;
+  }
+  
+  .cards-container {
+    display: grid;
+    background-image: url('./images/bg-main-desktop.png');
   }
 
-  .cards-container {
-    width: 483px;
-    height: 100vh;
+  .cards-wrapper {
+    max-height: 900px;
+    align-self: center;
   }
 
   .card {
@@ -289,20 +300,20 @@ footer {
   }
 
   .card-back {
-    top: 450px;
-    right: -215px;
+    top: 28.125rem;
+    right: -13rem;
   }
 
   .cvc {
-    font-size: calc(1 * var(--font-size));
+    font-size: 1em;
     top: 6.75rem;
     right: 3rem;
   }
 
   .card-front {
-    top: 180px;
+    top: 11.25rem;
     left: auto;
-    right: -100px;
+    right: -6.25rem;
     padding: 2rem;
   }
 
@@ -314,24 +325,20 @@ footer {
     width: 100%;
     letter-spacing: 0.2ch;
     padding-bottom: 1.5rem;
-    font-size: calc(1.5 * var(--font-size));
+    font-size: 1.5em;
   }
   
   .card-details {
-    font-size: calc(0.9 * var(--font-size));
+    font-size: 0.9em;
   }
   
   .form-container {
-    padding: 12rem 15rem 12rem 20rem;
-    min-width: 400px;
+    grid-column: 3/4;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .form-container.show-error {
-    padding: 12rem 15rem 12rem 20rem;
   }
 
   .form-group {
@@ -339,7 +346,7 @@ footer {
   }
 
   label {
-    font-size: calc(0.7 * var(--font-size));
+    font-size: 0.7em;
   }
 
   input {
@@ -348,9 +355,8 @@ footer {
   }
 
   .thank-you {
-    width: 100%;
-    height: 100%;
-    padding: 12rem 15rem 12rem 20rem;
+    grid-column: 3/4;
+    align-self: center;
     justify-content: center;
   }
 }
